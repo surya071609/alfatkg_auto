@@ -24,7 +24,7 @@ TODO: Describe and show how to build your code and run the tests.
 
         cd /your/project/path
 
-        npm install cypress --save-dev             // This will install Cypress locally as a dev dependency for your project.
+        npm install       // This will install Cypress locally as a dev dependency for your project.
     
 
 2.	Test Runner
@@ -45,10 +45,11 @@ TODO: Describe and show how to build your code and run the tests.
 3.  Test Execution in CLI
     To Run in Command Line:
 
-        npm run test                              // will all the test cases inside the integration folder 
+       1. Create a report Folder under / cypress/reports
+       2. npm run test                              // will all the test cases inside the integration folder 
 
 4.  Execution Reports
     
     Reports are Generated in the below folder:
-        **/\report.html
+        **cypress\reports\mochareports\report.html
 
