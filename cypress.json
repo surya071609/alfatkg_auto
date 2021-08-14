@@ -10,8 +10,7 @@
             "json": true
         }
     },
-    "chromeWebSecurity": false,
-    "testFiles": "**/*.feature"
+    "chromeWebSecurity": false
       
    
 }
