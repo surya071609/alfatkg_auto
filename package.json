@@ -1,0 +1,35 @@
+{
+  "name": "alfatkg_automation",
+  "version": "1.0.0",
+  "description": "poc on cypress",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S/Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json> cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surya071609/alfatkg_auto"
+  },
+  "author": "surya",
+  "license": "ISC",
+  "devDependencies": {
+    "axe-core": "^4.2.3",
+    "cypress": "^6.9.1",
+    "cypress-axe": "^0.12.2",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.0.1",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
